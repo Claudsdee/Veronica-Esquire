@@ -83,7 +83,6 @@ a[name] {
 }
 
 /****** purple box ******/
-
 header {
     display: flex;
     border: rgb(118, 0, 255) 5px solid;
@@ -231,34 +230,35 @@ header > .dropdown .dropdown-content {
     display: block;
     text-align: center;
     margin-top: 1%;
-    padding: 1%;
 }
 
 .sayer {
     font-size: 1rem;
     display: block;
     text-align: center;
-    margin-top: 1%;
-    line-height: 2rem;
-    margin-bottom: 1%;
-    padding: 1%;
+}
+
+#slide1 {
+    margin-top: 7vh;
 }
 
 .me {
-    display: block;
-    margin: auto;
-    margin-top: 1%;
-    width: 26%;
-    padding: 1%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+#slide2 {
+    margin-top: 5vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
 }
 
 .AMimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    width: 40%;
-    padding: 1%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
 .nova:hover {
