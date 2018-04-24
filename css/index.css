@@ -188,7 +188,7 @@ header > .dropdown .dropdown-content {
 
 /* animation for the Veronica light flickering */
 
-@keyframes lightFlickerver{
+/* @keyframes lightFlickerver{
     0%      { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
     8%      { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
     15%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
@@ -198,15 +198,79 @@ header > .dropdown .dropdown-content {
     50%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px white, 0 0 42px whitesmoke , 0 0 48px whitesmoke, 0 0 60px whitesmoke ;}
     52%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
     60%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
-    75%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(0, 255, 127) , 0 0 42px #00ffff , 0 0 48px #00ffff , 0 0 60px #00ffff ;}
+    72%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px white, 0 0 42px whitesmoke , 0 0 48px whitesmoke, 0 0 60px whitesmoke ;}
     80%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(255, 237, 0) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+    94%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(0, 255, 127) , 0 0 42px #00ffff , 0 0 48px #00ffff , 0 0 60px #00ffff ;}
     99%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(255, 237, 0) , 0 0 42px red, 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
     100%    { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+} */
+
+#offset {
+    animation: letter-flicker 2s linear infinite;
+}
+
+@keyframes text-flicker-ver {
+    0% {
+        opacity:0.1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);
+    }
+    
+    2% {
+        opacity:1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+
+    8% {
+        opacity:0.1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+
+    9% {
+        opacity:1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+
+    12% {
+        opacity:0.1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    20% {
+        opacity:1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    25% {
+        opacity:0.3;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    30% {
+        opacity:1;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    
+    70% {
+        opacity:0.7;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    
+    72% {
+        opacity:0.2;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+    
+    77% {
+        opacity:.9;
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
+
+    100% { 
+        opacity:.9; 
+        text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+    }
 }
 
 #animation #ver {
     color: black;
-    animation: lightFlickerver infinite 1.5s;
+    animation: text-flicker-ver infinite 1.5s;
     position: relative; 
 	bottom: 10vh;
 }
