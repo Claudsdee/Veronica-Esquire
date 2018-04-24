@@ -1,0 +1,321 @@
+/* Box Model Hack */
+* {
+    -moz-box-sizing: border-box; /* Firexfox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.alignright {
+    float: right;
+    padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+    float: left;
+    padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+    color: white;
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'cc_red_alert_inetregular';
+    src:    url('cc_red_alert_inet-webfont.woff2') format('woff2'),
+            url('cc_red_alert_inet-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+a {
+    cursor: pointer;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'cc_red_alert_inetregular';
+    margin-left: 1rem;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+a[name] {
+    padding-top: 10.5vh;
+    margin-top: -10.5vh;
+    display: block;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+#container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/****** purple box ******/
+
+header {
+    display: flex;
+    border: rgb(118, 0, 255) 5px solid;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 80%;
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: 'cc_red_alert_inetregular';
+    z-index: 5;
+}
+
+header > .dropdown .dropbtn {
+    font-size: 3rem;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    margin-right: 1vw;
+    cursor: pointer;
+
+}
+
+header > .dropdown .dropdown-content {
+    display:none;
+    list-style: none; 
+    overflow: hidden;
+    position: absolute;
+    font-size: 2rem;
+    text-align: right;
+    padding: 1% 2% 1% 2%;
+    right: 0.2%;
+    top: 117%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: rgba(233, 7, 203) 5px solid;
+    border-radius: 5px;
+}
+
+/***** blue box *****/
+#animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: rgb(0, 137, 255) 5px solid;
+    background: url(../images/grid.png) no-repeat top center;
+    height: 80vh;
+    border-radius: 5px;
+    margin-top: 10vh;
+    text-align: center;
+}
+
+#animation > div > h1 {
+    font-size: 3rem;
+}
+
+#animation > .aniName > h1 {
+    font-size: 10rem;
+    color: black;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;
+}
+
+/* Flickering animation for the "Loading. . . */
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
+#animation #loading {
+    animation: flickerAnimation 1.5s infinite;
+    position: relative; 
+	top: 25vh;
+}
+
+#animation > .aniLoad {
+    animation: fadeout 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    
+}
+@keyframes fadeout{
+    from{display:1}
+    to{opacity:0}
+}
+
+/* animation for the name to fade in */
+#animation > .aniName {
+    opacity: 0;
+    animation: fadein 1s;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+/* animation for the Veronica light flickering */
+
+@keyframes lightFlickerver{
+    0%      { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    8%      { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    15%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    28%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(255, 237, 0) , 0 0 42px rgb(255, 131, 0) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+    36%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    45%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    50%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px white, 0 0 42px whitesmoke , 0 0 48px whitesmoke, 0 0 60px whitesmoke ;}
+    52%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    60%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255) ;}
+    75%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(0, 255, 127) , 0 0 42px #00ffff , 0 0 48px #00ffff , 0 0 60px #00ffff ;}
+    80%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(255, 237, 0) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+    99%     { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(255, 237, 0) , 0 0 42px red, 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+    100%    { text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);}
+}
+
+#animation #ver {
+    color: black;
+    animation: lightFlickerver infinite 1.5s;
+    position: relative; 
+	bottom: 10vh;
+}
+
+#animation > .aniName > #esq {
+    font-size: 15rem;
+}
+
+
+/***** Green box *****/
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    border: rgb(0, 255, 127) 5px solid;
+    border-radius: 5px;
+    line-height: 2rem;
+}
+
+.quote {
+    font-style: italic;
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+.sayer {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+    line-height: 2rem;
+    margin-bottom: 1%;
+    padding: 1%;
+}
+
+.me {
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+    width: 26%;
+    padding: 1%;
+}
+
+.AMimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 40%;
+    padding: 1%;
+}
+
+.nova:hover {
+    text-decoration: underline rgb(0, 255, 127, 0.8);
+}
+
+
+/***** Yellow Box *****/
+#aom {
+    display: flex;
+    flex-direction: column;
+    border: rgb(255, 237, 0) 5px solid;
+    height: 70vh;
+    border-radius: 5px;
+}
+
+
+/***** Orange Box *****/
+#myMixes {
+    display: flex;
+    flex-direction: column;
+    border: rgb(255, 131, 0) 5px solid;
+    height: 70vh;
+    border-radius: 5px;
+}
+
+
+/***** Red Box *****/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: red 5px solid;
+    border-radius: 5px;
+    height: 15vh;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+}
+
+footer > p {
+    letter-spacing: 1rem;
+    font-size: 1rem;
+}
+
+/* Smaller devices */
+@media (max-width: 700px) {
+    .container {
+        width: 90vw;
+    }
+
+    header {
+        width: 90vw;
+        }
+    }
