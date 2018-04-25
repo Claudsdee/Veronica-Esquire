@@ -118,9 +118,13 @@ header > .dropdown .dropdown-content {
     right: 0.2%;
     top: 106%;
     background-color: rgba(0, 0, 0, 0.5);
-    border: rgb(233, 7, 203) 5px solid;
+    border: rgb(233, 7, 203) 4px solid;
     border-radius: 5px;
-    right: -0.5vw;
+    right: -0.4vw;
+}
+
+header > .dropdown .dropdown-content a:hover{
+    text-decoration: underline rgb(233, 7, 203);
 }
 
 /***** blue box *****/
@@ -313,7 +317,7 @@ header > .dropdown .dropdown-content {
 }
 
 .nova:hover {
-    text-decoration: underline rgb(0, 255, 127, 0.8);
+    text-decoration: underline rgb(0, 255, 127);
 }
 
 
@@ -346,7 +350,7 @@ header > .dropdown .dropdown-content {
 }
 
 .interview:hover {
-    text-decoration: underline rgb(255, 237, 0, 0.8);
+    text-decoration: underline rgb(255, 237, 0);
 }
 
 .spotify {
