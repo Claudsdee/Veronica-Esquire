@@ -49,9 +49,10 @@ a {
     cursor: pointer;
 }
 
-a:link, a:visited {
+a:link, a:visited, a:active {
     text-decoration: none;
     color: white;
+    outline: none;
 }
 
 h1 {
@@ -188,7 +189,7 @@ header > .dropdown .dropdown-content {
 
 /* animation for the Veronica light flickering */
 @keyframes text-flicker-ver {
-    0% {
+    0% { 
         opacity:0.1;
         text-shadow: 0 0 6px rgba(255,255,255,1) , 0 0 12px rgba(255,255,255,1) , 0 0 18px rgba(255,255,255,1) , 0 0 24px rgb(118, 0, 255) , 0 0 42px rgb(118, 0, 255) , 0 0 48px rgb(118, 0, 255) , 0 0 60px rgb(118, 0, 255);
     }
@@ -269,6 +270,13 @@ header > .dropdown .dropdown-content {
 
 #aboutMe > h1 {
     margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#aboutMe > .carousel {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
 }
 
 .quote {
@@ -284,8 +292,8 @@ header > .dropdown .dropdown-content {
     text-align: center;
 }
 
-#slide1 {
-    margin-top: 7vh;
+#aboutMe >.carousel > .slide1 {
+    margin-top: 10vh;
 }
 
 .me {
@@ -294,10 +302,8 @@ header > .dropdown .dropdown-content {
     margin-bottom: 3vh;
 }
 
-#slide2 {
-    margin-top: 5vh;
-    margin-left: 1vh;
-    margin-right: 1vh;
+#aboutMe >.carousel > .slide2 {
+    margin-top: 10vh;
 }
 
 .AMimg {
@@ -319,7 +325,31 @@ header > .dropdown .dropdown-content {
     border: rgb(255, 237, 0) 5px solid;
     height: 70vh;
     border-radius: 5px;
+    line-height: 2rem;
 }
+
+#aom > h1 {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.artMthimage {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+#aom > .carousel {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    height: 98%;
+}
+
+.interview:hover {
+    text-decoration: underline rgb(255, 237, 0, 0.8);
+}
+
 
 /***** Orange Box *****/
 #myMixes {
@@ -355,12 +385,12 @@ footer > p {
 }
 
 /* Smaller devices */
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     .container {
-        width: 90vw;
+        width: 100%;
     }
 
     header {
-        width: 90vw;
+        width: 100%;
         }
     }

@@ -51,7 +51,7 @@
     font-family:  'cc_red_alert_inetregular';
     font-size: 20px;
     line-height: 1;
-    color: rgb(0, 255, 127);
+    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -147,5 +147,6 @@
 }
 
 .slick-dots li.slick-active button:before {
-    color: rgb(0, 255, 127, 0.5);
+    color: white;
+    opacity: 0.7;
 }
