@@ -42,7 +42,6 @@ body {
             url('cc_red_alert_inet-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 a {
@@ -416,7 +415,7 @@ footer > p {
     font-size: 1rem;
 }
 
-/* Smaller devices */
+/* Smaller devices 
 @media (max-width: 750px) {
     .container {
         width: 100%;
@@ -425,4 +424,4 @@ footer > p {
     header {
         width: 100%;
         }
-    }
+    } */
