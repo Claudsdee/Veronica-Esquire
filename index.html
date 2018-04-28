@@ -19,6 +19,8 @@
     <script src="scripts/menu.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/carousel.js"></script>
+    <!-- <SCript src="scripts/scrolleffect.js"></SCript> -->
+    <script src="scripts/jquery.scrollify.js"></script>
 
 
 
@@ -43,7 +45,7 @@
                 </div>
             </div>
         </header>
-        <section id="animation">
+        <section id="animation" class="parts" name="logo">
             <div class="aniLoad">
                 <h1 id="loading">Loading . . .</h1>
             </div>
@@ -52,7 +54,7 @@
                 <h1 id="esq" class="DJname">Esquire</h1>
             </div>
         </section>
-        <article id="aboutMe">
+        <article id="aboutMe" class="parts" name="about">
             <a name="AM"></a>
             <h1>+ About Me +</h1>
             <div class="carousel">
@@ -69,7 +71,7 @@
                     <div class="AMimg">
                         <img src="https://i.gifer.com/9O5A.gif" alt="Bill and Ted">
                     </div>
-                    <p>Currently performing 1 person bedroom parties & purveyor of #awkwardswag.</p>
+                    <p>Currently performing 1 person bedroom parties & purveyor of <span id="awk">#awkwardswag.</span></p>
                     <p>Based in Sydney, Australia (Not
                         <a href="http://www.news.com.au/travel/world-travel/north-america/confused-tourist-bound-for-sydney-australia-lands-in-sydney-nova-scotia/news-story/83d1957c3369364b979a9b1371786a3b"
                             class="nova">Nova Scotia</a>, Canada).</p>
@@ -78,7 +80,7 @@
                 </div>
             </div>
         </article>
-        <section id="aom">
+        <section id="aom" class="parts" name="artist">
             <a name="artMth"></a>
             <h1>+ Artist of the Month +</h1>
             <div class="carousel">
@@ -117,7 +119,7 @@
 
             </div>
         </section>
-        <section id="myMixes">
+        <section id="myMixes" class="parts" name"mix">
             <a name="MM"></a>
             <h1>+ My Mixes +</h1>
             <div class="carousel">
