@@ -320,6 +320,16 @@ header > .dropdown .dropdown-content a:hover{
     text-decoration: underline rgb(0, 255, 127);
 }
 
+#aboutMe .slick-arrow:before,
+#aboutMe .slick-next:before {
+    color: rgb(0, 255, 127);
+}
+
+#aboutMe .slick-dots li.slick-active button:before {
+    color: rgb(0, 255, 127);
+    opacity: 0.7;
+}
+
 
 /***** Yellow Box *****/
 #aom {
@@ -347,6 +357,16 @@ header > .dropdown .dropdown-content a:hover{
     justify-content: center;
     padding: 1%;
     height: 98%;
+}
+
+#aom .slick-arrow:before,
+#aom .slick-next:before {
+    color: rgb(255, 237, 0);
+}
+
+#aom .slick-dots li.slick-active button:before {
+    color: rgb(255, 237, 0);
+    opacity: 0.7;
 }
 
 .interview:hover {
@@ -379,6 +399,16 @@ header > .dropdown .dropdown-content a:hover{
     padding: 1%;
     height: 98%;
     line-height: 2rem;
+}
+
+#myMixes .slick-arrow:before,
+#myMixes .slick-next:before {
+    color: rgb(255, 131, 0);
+}
+
+#myMixes .slick-dots li.slick-active button:before {
+    color: rgb(255, 131, 0);
+    opacity: 0.7;
 }
 
 .mixcloudPlayer {
@@ -418,6 +448,117 @@ footer > p {
     letter-spacing: 1rem;
     font-size: 1rem;
 }
+
+/* carousel CSS override */
+.slick-prev, .slick-next {
+z-index: 3;
+top: 40%;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family:  'cc_red_alert_inetregular';
+    font-size: 20px;
+}
+
+.slick-prev {
+    left: 2rem;
+}
+
+[dir='rtl'] .slick-prev {
+    left: auto;
+    right: 2rem;
+
+}
+
+.slick-prev:before {
+    content: '<';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+[dir='rtl'] .slick-prev:before {
+    content: '>';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.slick-next {
+    right: 2rem;
+}
+
+[dir='rtl'] .slick-next {
+    right: auto;
+    left: 2rem;
+}
+
+.slick-next:before {
+    content: '>';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+[dir='rtl'] .slick-next:before {
+    content: '<';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -2.5vh;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:before {
+    font-family: 'cc_red_alert_inetregular';
+    font-size: 4rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '•';
+    text-align: center;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 0.7;
+}
+
+
+
+
 
 /* Smaller devices 
 @media (max-width: 750px) {
