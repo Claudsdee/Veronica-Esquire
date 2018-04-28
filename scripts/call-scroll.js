@@ -1,14 +1,65 @@
 $(document).ready(function() {
-    onepagescroll('div #container',{
-        pageContainer: 'section',       //child elements selector. use if you don't want to use section for page.
-        animationType: 'ease-in-out',   //determine css3 animation that will run when page changes
-                                        //ex) 'ease', 'ease-out-in', 'cubic-bezier(0.2, 0.75, 0.5, 1.15)'
-        animationTime: 500,             //define how long each page takes to animate, 0 for off
-        infinite: true,                 //back to the last/first page when you scroll at first/last page
-        pagination: true,               //set show or hide pagination element.
-        keyboard: true,                 //allow up/page-up and down/page-down key for page scroll
-        direction: 'vertical'           //determine direction of page scroll. options available are 'vertical' and 'horizontal'
-        scroll: true,
-        });
-    
+	$('.parts').fullpage({
+
+		//Scrolling
+		css3: true,
+		scrollingSpeed: 900,
+		autoScrolling: true,
+		fitToSection: false,
+		fitToSectionDelay: 1000,
+		scrollBar: false,
+		easing: 'easeInOutCubic',
+		easingcss3: 'ease',
+		loopBottom: false,
+		loopTop: false,
+		loopHorizontal: true,
+		continuousVertical: true,
+		continuousHorizontal: false,
+		scrollHorizontally: false,
+		interlockedSlides: false,
+		dragAndMove: false,
+		offsetSections: false,
+		resetSliders: false,
+		fadingEffect: true,
+		normalScrollElements: '#container, .element2',
+		scrollOverflow: true,
+		scrollOverflowReset: true,
+		scrollOverflowOptions: null,
+		touchSensitivity: 15,
+		normalScrollElementTouchThreshold: 5,
+		bigSectionsDestination: null,
+
+		//Accessibility
+		keyboardScrolling: true,
+		animateAnchor: true,
+		recordHistory: true,
+
+		//Design
+		controlArrows: true,
+		verticalCentered: true,
+		sectionsColor : ['#ccc', '#fff'],
+		paddingTop: '3em',
+		paddingBottom: '10px',
+		fixedElements: '#header, .footer',
+		responsiveWidth: 0,
+		responsiveHeight: 0,
+		responsiveSlides: false,
+		parallax: true,
+		parallaxOptions: {type: 'reveal', percentage: 100, property: 'translate'},
+
+		//Custom selectors
+		sectionSelector: '.part',
+		slideSelector: '.slide',
+
+		lazyLoading: true,
+
+		//events
+		onLeave: function(index, nextIndex, direction){},
+		afterLoad: function(anchorLink, index){},
+		afterRender: function(){},
+		afterResize: function(){},
+		afterResponsive: function(isResponsive){},
+		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+	});
 });
