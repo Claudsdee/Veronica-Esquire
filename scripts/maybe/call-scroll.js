@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.parts').fullpage({
+	$('#container').fullpage({
 
 		//Scrolling
 		css3: true,
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		offsetSections: false,
 		resetSliders: false,
 		fadingEffect: true,
-		normalScrollElements: '#container, .element2',
+		normalScrollElements: '.parts',
 		scrollOverflow: true,
 		scrollOverflowReset: true,
 		scrollOverflowOptions: null,
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		sectionsColor : ['#ccc', '#fff'],
 		paddingTop: '3em',
 		paddingBottom: '10px',
-		fixedElements: '#header, .footer',
+		// fixedElements: 'header, footer',
 		responsiveWidth: 0,
 		responsiveHeight: 0,
 		responsiveSlides: false,
@@ -48,8 +48,8 @@ $(document).ready(function() {
 		parallaxOptions: {type: 'reveal', percentage: 100, property: 'translate'},
 
 		//Custom selectors
-		sectionSelector: '.part',
-		slideSelector: '.slide',
+		sectionSelector: '.parts',
+		slideSelector: '.slide1, .slide2, .slide3',
 
 		lazyLoading: true,
 
