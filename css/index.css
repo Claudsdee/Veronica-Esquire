@@ -298,13 +298,14 @@ header > .dropdown .dropdown-content a:hover{
 }
 
 #aboutMe >.carousel > .slide1 {
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
 .me {
     display: flex;
     justify-content: center;
     margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
 #aboutMe >.carousel > .slide2 {
@@ -459,6 +460,22 @@ footer > p {
     font-size: 1rem;
     margin: 0rem;
 }
+
+.back-to-top {
+    font-family:  'cc_red_alert_inetregular';
+    font-size: 5rem;
+    background: none;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    right: 4vh;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+}
+
 
 /* carousel CSS override */
 .slick-prev, .slick-next {
