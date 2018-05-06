@@ -166,7 +166,7 @@ header > .dropdown .dropdown-content a:hover{
 }
 
 #animation > .aniLoad {
-    animation: fadeout 1s;
+    animation: fadeout 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 3s;
@@ -476,7 +476,6 @@ footer > p {
     text-decoration: none;
 }
 
-
 /* carousel CSS override */
 .slick-prev, .slick-next {
     z-index: 3;
@@ -495,7 +494,6 @@ footer > p {
 [dir='rtl'] .slick-prev {
     left: auto;
     right: 1rem;
-
 }
 
 .slick-prev:before {
