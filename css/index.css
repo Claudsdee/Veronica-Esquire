@@ -134,7 +134,7 @@ header > .dropdown .dropdown-content a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     border: rgb(0, 137, 255) 5px solid;
-    background: url(../images/grid.png) no-repeat center;
+    background: url(../images/grid.png);
     background-size: auto;
     height: 90vh;
     border-radius: 5px;
